@@ -1,8 +1,6 @@
 from graph import *
 from abc import abstractmethod
 
-
-
 class Picture:
     def __init__(self, x, y, scale):
         self.x = x
@@ -18,7 +16,6 @@ class Sun(Picture):
     def print(self):
         brushColor("yellow")
         circle(self.x, self.y, self.scale)
-
 
 class Tree(Picture):
     def print(self):
@@ -123,9 +120,6 @@ class Unicorn(Picture):
         self.main()
         self.tail()
 
-
-
-
 windowSize(794,1123)
 canvasSize(794,1123)
 brushColor(0,255,255)
@@ -143,8 +137,3 @@ a = Unicorn(500, 700, 150)
 a.print()
 
 run()
-
-
-
-
-

@@ -1,8 +1,6 @@
 from graph import *
 from abc import abstractmethod
 
-
-
 class Picture:
     def __init__(self, x, y, scale):
         self.x = x
@@ -85,7 +83,6 @@ class Unicorn(Picture):
         self.yh = y
         penSize(0)
 
-
     def __hair(self, x, y, xs, ys):
         if xs%2 == 0 and ys%2==0:
             brushColor("#E883E0")
@@ -166,8 +163,6 @@ class Unicorn(Picture):
         self.__eye()
         self.__allhair()
 
-
-
 windowSize(794,1123)
 canvasSize(794,1123)
 brushColor(0,255,255)
@@ -188,7 +183,6 @@ a.changeXYS(200,620,150,150)
 a.print()
 a.changeXYS(120,800,150,150)
 a.print()
-
 
 a = Unicorn(410, 870, 110)
 a.print()
