@@ -19,11 +19,6 @@ class Sun(Picture):
         brushColor("yellow")
         circle(self.x, self.y, self.scale)
 
-class BrightSun(Picture):
-    def print(self):
-        for i in range(127):
-            brushColor(i*2, 255, 254 -i*2)
-            circle(self.x,self.y,129-i)
 
 class Tree(Picture):
     def print(self):
@@ -119,8 +114,15 @@ class Unicorn(Picture):
         circle(self.x + self.scalex*0.97, self.y - self.scaley*1.03, self.scale*0.03)
         brushColor("white")
         oval(self.x + self.scalex*0.935, self.y - self.scaley*1.05, self.scalex*0.04,self.scaley*0.015)
+
+        brushColor("pink")
+        polygon([(self.x + self.scalex * 0.7, self.y - self.scaley * 1.2),
+                 (self.x + self.scalex * 0.87, self.y - self.scaley * 1.2),
+                 (self.x + self.scalex * 0.83, self.y - self.scaley * 1.7)])
+
         self.main()
         self.tail()
+
 
 
 
@@ -134,7 +136,7 @@ rectangle(0,1123,794,499)
 a = Tree(130,400,150)
 a.print()
 
-a = BrightSun(770,100,200)
+a = Sun(770,100,200)
 a.print()
 
 a = Unicorn(500, 700, 150)
